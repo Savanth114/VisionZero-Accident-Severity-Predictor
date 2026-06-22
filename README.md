@@ -24,6 +24,27 @@ VisionZero leverages Machine Learning to predict accident severity from real-wor
 
 ---
 
+## 🏗️ Model Methodology
+
+<p align="center">
+  <img src="assets/model_methodology.png" width="100%">
+</p>
+
+### Pipeline
+
+1. Raw Data Collection (12,316 Records)
+2. Feature Engineering (11 New Features)
+3. Smart Encoding
+4. SMOTE Resampling
+5. Feature Scaling
+6. Train-Test Split (80:20)
+7. XGBoost Training
+8. Performance Evaluation
+
+The model leverages feature engineering, class balancing, and XGBoost optimization to accurately predict accident severity.
+
+---
+
 ## 🗂 Dataset
 
 ### Dataset Characteristics
@@ -52,38 +73,37 @@ VisionZero leverages Machine Learning to predict accident severity from real-wor
 Advanced preprocessing techniques were applied to ensure reliable model performance despite imperfect data.
 
 ---
+### Classification Results
 
-## ⚙️ Methodology
+| Actual Class | Correct Predictions |
+|-------------|---------------------|
+| Slight | 490 |
+| Serious | 446 |
+| Fatal | 484 |
 
-### Data Preprocessing
+The confusion matrix demonstrates strong predictive performance across all severity categories, with very low misclassification rates.
 
-* Missing value treatment
-* Data cleaning
-* Feature engineering
-* Categorical feature encoding
+---
 
-### Feature Engineering
+## 🎯 Feature Importance Analysis
 
-Custom features created include:
+<p align="center">
+  <img src="assets/feature_importance.png" width="90%">
+</p>
 
-* Night-condition indicators
-* Weather risk flags
-* Driver risk scores
-* Junction context variables
+### Most Influential Features
 
-### Class Balancing
+- Driving Experience
+- Types of Junction
+- Multiple Vehicles Involved
+- Weather Conditions
+- Night-Time Conditions
+- Vehicle Service Years
+- Casualty Count
+- Driver Risk Score
+- Road Surface Type
 
-To improve prediction performance on minority severity classes:
-
-* SMOTE (Synthetic Minority Oversampling Technique)
-* Class balancing strategies
-
-### Encoding Techniques
-
-* One-Hot Encoding
-* Target Encoding
-
-These transformations converted raw accident records into meaningful predictive signals.
+These factors contribute most significantly to accident severity prediction.
 
 ---
 
@@ -121,6 +141,10 @@ Reasons for selection:
 ### Key Achievement
 
 The model maintains high performance while preserving balance across minority severity classes, enabling accurate detection of rare but severe accidents.
+
+### Performance Visualization
+
+### Confusion Matrix
 
 ---
 
