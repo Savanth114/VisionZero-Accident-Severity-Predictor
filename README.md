@@ -1,46 +1,184 @@
-# VisionZero: Accident Severity Predictor
+# VisionZero – Accident Severity Predictor
 
-## Overview
+## Urban Infrastructure & Public Safety Datathon Project
 
-VisionZero is a machine learning-based accident severity prediction system developed to support road safety initiatives and help authorities identify high-risk accident scenarios. The project analyzes road accident data and predicts the severity of accidents based on various contributing factors.
+VisionZero is a machine learning-based accident severity prediction system designed to analyze road accident data and forecast accident severity levels using real-world post-crash reports.
 
-The goal is to assist policymakers, traffic management authorities, and urban planners in making data-driven decisions to reduce road accidents and improve public safety.
+The project addresses a critical public safety challenge by identifying the factors that contribute to severe accidents and providing data-driven recommendations for reducing serious injuries on roads.
 
 ---
 
 ## Problem Statement
 
-Road accidents are a major cause of injuries and fatalities worldwide. Predicting accident severity before incidents occur can help authorities implement preventive measures, optimize emergency response systems, and improve road infrastructure planning.
+Traffic accidents are rarely caused by a single factor. They result from a combination of road conditions, weather, lighting, vehicle defects, road alignment, driver behavior, and environmental conditions.
 
-This project aims to:
+The objective of this project is to build a robust multi-class classification model capable of predicting:
 
-* Analyze historical road accident data
-* Identify key factors influencing accident severity
-* Build a predictive machine learning model
-* Generate insights for accident prevention strategies
+**Accident Severity**
+
+* Slight Injury
+* Serious Injury
+* Other severity categories
+
+using historical road accident records.
+
+In addition to prediction, the project aims to uncover the major causes of severe accidents and generate actionable recommendations for traffic authorities.
+
+---
+
+## Objectives
+
+* Analyze accident records and identify key risk factors.
+* Perform deep categorical data analysis.
+* Build a multi-class accident severity prediction model.
+* Handle class imbalance in accident data.
+* Evaluate model performance using F1-based metrics.
+* Provide infrastructure and policy recommendations to reduce severe accidents.
 
 ---
 
 ## Dataset
 
-The dataset contains road accident records with multiple features related to:
+**Dataset File:** `Road.csv`
 
-* Road conditions
-* Weather conditions
-* Traffic information
-* Vehicle-related factors
-* Environmental conditions
-* Accident severity labels
+The dataset contains accident-related information including:
 
-### Dataset File
-
-```text
-Road.csv
-```
+* Weather Conditions
+* Road Surface Conditions
+* Road Alignment
+* Vehicle Types
+* Lighting Conditions
+* Environmental Factors
+* Driver and Vehicle Information
+* Accident Severity Labels
 
 ---
 
-## Project Structure
+## Project Workflow
+
+### 1. Data Understanding
+
+* Explore accident records
+* Study feature distributions
+* Identify missing values
+* Analyze target class distribution
+
+### 2. Data Preprocessing
+
+* Data cleaning
+* Missing value handling
+* Duplicate removal
+* Feature transformation
+
+### 3. Categorical Feature Encoding
+
+The dataset contains several high-cardinality categorical features.
+
+Encoding techniques used include:
+
+* One-Hot Encoding
+* Label Encoding
+* Feature Transformation
+
+Examples:
+
+* Weather Conditions
+* Vehicle Types
+* Road Alignment
+* Junction Details
+
+### 4. Handling Class Imbalance
+
+Accident severity datasets typically contain imbalanced class distributions.
+
+Techniques considered:
+
+* SMOTE
+* Class Weighting
+* Undersampling
+* Balanced Training Strategies
+
+### 5. Exploratory Data Analysis
+
+* Severity Distribution Analysis
+* Accident Trend Analysis
+* Risk Factor Identification
+* Correlation Analysis
+
+### 6. Model Development
+
+A Multi-Class Classification model was developed to predict accident severity based on accident attributes.
+
+Possible algorithms explored:
+
+* Random Forest
+* Decision Tree
+* XGBoost
+* Gradient Boosting
+* Other Classification Models
+
+### 7. Model Evaluation
+
+Since accuracy alone can be misleading for imbalanced datasets, evaluation focuses on:
+
+* Macro F1 Score
+* Micro F1 Score
+* Precision
+* Recall
+* Confusion Matrix
+
+---
+
+## Key Insights
+
+The project identifies critical factors contributing to severe road accidents, including:
+
+* Poor weather conditions
+* Road alignment issues
+* Vehicle-related defects
+* Unsafe road infrastructure
+* Environmental and visibility challenges
+
+These insights help prioritize road safety interventions.
+
+---
+
+## Policy & Infrastructure Recommendations
+
+Based on data analysis, the project proposes evidence-based recommendations for traffic authorities:
+
+### 1. Improve High-Risk Road Segments
+
+* Redesign dangerous intersections
+* Improve road alignment
+* Upgrade road markings
+
+### 2. Enhance Lighting & Visibility
+
+* Install smart street lighting
+* Improve visibility in accident-prone zones
+
+### 3. Strengthen Traffic Safety Measures
+
+* Targeted enforcement in high-risk areas
+* Improved warning systems
+* Public safety awareness initiatives
+
+---
+
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-Learn
+* Jupyter Notebook
+
+---
+
+## Repository Structure
 
 ```text
 VisionZero-Accident-Severity-Predictor/
@@ -63,115 +201,29 @@ VisionZero-Accident-Severity-Predictor/
 
 ---
 
-## Technologies Used
+## Real-World Impact
 
-* Python
-* Jupyter Notebook
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Scikit-Learn
+This project supports the Vision Zero initiative by leveraging machine learning to:
 
----
-
-## Machine Learning Workflow
-
-### 1. Data Collection
-
-* Import accident dataset
-* Load data into Python environment
-
-### 2. Data Preprocessing
-
-* Handle missing values
-* Remove duplicates
-* Feature encoding
-* Data cleaning
-
-### 3. Exploratory Data Analysis (EDA)
-
-* Severity distribution analysis
-* Feature correlation analysis
-* Accident trend visualization
-
-### 4. Feature Engineering
-
-* Selection of important attributes
-* Data transformation
-* Scaling and normalization
-
-### 5. Model Development
-
-* Train machine learning models
-* Compare model performance
-* Optimize prediction accuracy
-
-### 6. Evaluation
-
-Performance evaluated using:
-
-* Accuracy Score
-* Precision
-* Recall
-* F1 Score
-* Confusion Matrix
+* Predict accident severity
+* Improve emergency response planning
+* Guide infrastructure investments
+* Enhance urban traffic safety
+* Support smart-city decision-making
 
 ---
 
-## Key Features
+## Learning Outcomes
 
-* Road accident severity prediction
-* Data visualization and analytics
-* Risk factor identification
-* Machine learning-based classification
-* Decision-support insights for road safety
-
----
-
-## Results
-
-The developed model successfully identifies accident severity levels based on historical accident data and associated environmental factors.
-
-The insights generated can help:
-
-* Improve road safety planning
-* Support emergency response prioritization
-* Identify accident-prone conditions
-* Assist traffic authorities in preventive measures
-
----
-
-## Future Improvements
-
-* Real-time accident risk prediction
-* Integration with GIS mapping systems
-* Deep Learning-based prediction models
-* Weather API integration
-* Smart city traffic management integration
-* Explainable AI (XAI) implementation
-
----
-
-## Presentation
-
-Project presentation:
-
-```text
-VisionZero-Predictor.pptx
-```
-
----
-
-## Datathon Submission
-
-This project was developed as part of a Datathon competition focused on leveraging data analytics and machine learning techniques to address real-world road safety challenges.
+* Advanced categorical feature engineering
+* Handling real-world class imbalance
+* Multi-class classification modeling
+* Policy-oriented data analysis
+* Data-driven public safety decision making
 
 ---
 
 ## Team
-
-### Team Members
 
 * Savanth G
 * Pardeen
@@ -180,34 +232,6 @@ This project was developed as part of a Datathon competition focused on leveragi
 
 ---
 
-## How to Run
-
-### Clone Repository
-
-```bash
-git clone https://github.com/your-username/VisionZero-Accident-Severity-Predictor.git
-```
-
-### Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Launch Notebook
-
-```bash
-jupyter notebook
-```
-
-Open:
-
-```text
-VisionZero_Colab.ipynb
-```
-
----
-
 ## License
 
-This project is intended for academic and educational purposes.
+This project is developed for educational and datathon purposes.
