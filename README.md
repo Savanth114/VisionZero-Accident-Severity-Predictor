@@ -295,3 +295,11 @@ VisionZero-Accident-Severity-Predictor/
 ## 📜 License
 
 This project was developed as part of an Urban Infrastructure & Public Safety Datathon for educational and research purposes.
+
+---
+
+## Contact
+
+**Savanth G**  
+📧 savanthg14@gmail.com  
+🌐 LinkedIn : linkedin.com/in/savanth-g-65454a36b
