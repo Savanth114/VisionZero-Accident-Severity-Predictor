@@ -25,11 +25,6 @@ VisionZero leverages Machine Learning to predict accident severity from real-wor
 ---
 
 ## 🏗️ Model Methodology
-
-<p align="center">
-  <img src="assets/model_methodology.png" width="100%">
-</p>
-
 ### Pipeline
 
 1. Raw Data Collection (12,316 Records)
