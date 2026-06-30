@@ -82,10 +82,6 @@ The confusion matrix demonstrates strong predictive performance across all sever
 
 ## 🎯 Feature Importance Analysis
 
-<p align="center">
-  <img src="assets/feature_importance.png" width="90%">
-</p>
-
 ### Most Influential Features
 
 - Driving Experience
